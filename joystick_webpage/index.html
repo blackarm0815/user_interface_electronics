@@ -3,31 +3,33 @@
   <head>
     <meta content = 'text/html;charset=utf-8' http-equiv = 'Content-Type'>
     <meta content = 'utf-8' http-equiv = 'encoding'>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>joystick</title>
     <style>
       #background {
-        background-color: #585858;
         position: absolute;
       }
       #joystick {
-        background-color: #ffffff;
+        background-color: #a5abff;
         position: absolute;
       }
       #lever {
-        background-color: #ffffff;
+        background-color: #a5abff;
         position: absolute;
       }
       #output0 {
-        background-color: #ffffff;
         position: absolute;
       }
       #output1 {
-        background-color: #ffffff;
         position: absolute;
       }
       #output2 {
-        background-color: #ffffff;
         position: absolute;
+      }
+      .output {
+        background-color: #b9b9b9;
+        box-sizing: border-box;
+        text-align: center;
       }
     </style>
   </head>
@@ -35,9 +37,9 @@
     <div id = 'background'></div>
     <div id = 'joystick'></div>
     <div id = 'lever'></div>
-    <div id = 'output0'></div>
-    <div id = 'output1'></div>
-    <div id = 'output2'></div>
+    <div id = 'output0' class = 'output'>0.000</div>
+    <div id = 'output1' class = 'output'>0.000</div>
+    <div id = 'output2' class = 'output'>0.000</div>
     <script src = 'code.js'></script>
   </body>
 </html>
