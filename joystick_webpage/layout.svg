@@ -32,7 +32,7 @@
      fit-margin-bottom="0"
      inkscape:zoom="2.1997092"
      inkscape:cx="395.05222"
-     inkscape:cy="198.88992"
+     inkscape:cy="198.88993"
      inkscape:window-width="3431"
      inkscape:window-height="1694"
      inkscape:window-x="409"
@@ -55,9 +55,9 @@
      id="layer1"
      transform="translate(-15.875,-84.666664)">
     <rect
-       style="fill:#999999;stroke-width:0.339734"
+       style="fill:#999999;stroke-width:0.347729"
        id="rect1084"
-       width="222.25"
+       width="232.83333"
        height="100.54167"
        x="15.875"
        y="84.666664" />
@@ -66,8 +66,8 @@
        id="rect848"
        width="31.749998"
        height="15.875001"
-       x="111.125"
-       y="95.25" />
+       x="116.41666"
+       y="95.250008" />
     <rect
        style="fill:#ffffff;stroke-width:0.31981"
        id="rect978"
@@ -78,13 +78,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.58611px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="121.0591"
+       x="126.35076"
        y="104.89722"
        id="text5439"><tspan
          sodipodi:role="line"
          id="tspan5437"
          style="font-size:4.58611px;stroke-width:0.264583"
-         x="121.0591"
+         x="126.35076"
          y="104.89722">left x</tspan></text>
     <text
        xml:space="preserve"
@@ -102,72 +102,72 @@
        id="rect838"
        width="79.375"
        height="79.375"
-       x="148.16667"
+       x="158.75"
        y="95.250008" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.58611px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="179.18579"
+       x="189.76912"
        y="136.20271"
        id="text842"><tspan
          sodipodi:role="line"
          id="tspan840"
          style="font-size:4.58611px;stroke-width:0.264583"
-         x="179.18579"
+         x="189.76912"
          y="136.20271">joystick</tspan></text>
     <rect
        style="fill:#ffffff;stroke-width:0.280633"
        id="rect1004"
        width="31.749998"
        height="15.875001"
-       x="111.125"
-       y="116.41666" />
+       x="116.41666"
+       y="116.41667" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.58611px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="121.05239"
-       y="125.61937"
+       x="126.34406"
+       y="125.61938"
        id="text1008"><tspan
          sodipodi:role="line"
          id="tspan1006"
          style="font-size:4.58611px;stroke-width:0.264583"
-         x="121.05239"
-         y="125.61937">left y</tspan></text>
+         x="126.34406"
+         y="125.61938">left y</tspan></text>
     <rect
        style="fill:#ffffff;stroke-width:0.280633"
        id="rect1010"
        width="31.749998"
        height="15.875001"
-       x="111.125"
-       y="137.58333" />
+       x="116.41666"
+       y="137.58334" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.58611px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="119.39306"
-       y="146.78604"
+       x="124.68472"
+       y="146.78606"
        id="text1014"><tspan
          sodipodi:role="line"
          id="tspan1012"
          style="font-size:4.58611px;stroke-width:0.264583"
-         x="119.39306"
-         y="146.78604">right x</tspan></text>
+         x="124.68472"
+         y="146.78606">right x</tspan></text>
     <rect
        style="fill:#ffffff;stroke-width:0.280633"
        id="rect1016"
        width="31.749998"
        height="15.875001"
-       x="111.125"
-       y="158.75" />
+       x="116.41666"
+       y="158.75002" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.58611px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="119.38634"
-       y="167.95271"
+       x="124.678"
+       y="167.95273"
        id="text1020"><tspan
          sodipodi:role="line"
          id="tspan1018"
          style="font-size:4.58611px;stroke-width:0.264583"
-         x="119.38634"
-         y="167.95271">right y</tspan></text>
+         x="124.678"
+         y="167.95273">right y</tspan></text>
   </g>
 </svg>

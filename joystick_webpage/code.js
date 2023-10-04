@@ -1,16 +1,16 @@
 "use strict";
 const resizeDivs = () => {
-    const scaleHeight = window.innerHeight / 22;
-    const scaleWidth = window.innerWidth / 22;
+    const scaleHeight = window.innerHeight / 19;
+    const scaleWidth = window.innerWidth / 44;
     let scale = scaleWidth;
     if (scaleHeight < scaleWidth) {
         scale = scaleHeight;
     }
     // background
-    const backgroundHeight = scale * 22;
-    const backgroundLeft = Math.floor((window.innerWidth - (scale * 22)) / 2);
+    const backgroundHeight = scale * 19;
+    const backgroundLeft = Math.floor((window.innerWidth - (scale * 44)) / 2);
     const backgroundTop = 0;
-    const backgroundWidth = scale * 22;
+    const backgroundWidth = scale * 42;
     const divBackground = document.getElementById('background');
     if (divBackground !== null) {
         divBackground.style.height = `${backgroundHeight}px`;
@@ -18,37 +18,37 @@ const resizeDivs = () => {
         divBackground.style.top = `${backgroundTop}px`;
         divBackground.style.width = `${backgroundWidth}px`;
     }
-    // joystick
-    const joystickHeight = scale * 15;
-    const joystickLeft = backgroundLeft + scale;
-    const joystickTop = backgroundTop + (scale * 6);
-    const joystickWidth = scale * 15;
-    const divJoystick = document.getElementById('joystick');
+    // joystick0
+    const joystick0Height = scale * 15;
+    const joystick0Left = backgroundLeft + (scale * 2);
+    const joystick0Top = backgroundTop + (scale * 2);
+    const joystick0Width = scale * 15;
+    const divJoystick = document.getElementById('joystick0');
     if (divJoystick !== null) {
-        divJoystick.style.height = `${joystickHeight}px`;
-        divJoystick.style.left = `${joystickLeft}px`;
-        divJoystick.style.top = `${joystickTop}px`;
-        divJoystick.style.width = `${joystickWidth}px`;
+        divJoystick.style.height = `${joystick0Height}px`;
+        divJoystick.style.left = `${joystick0Left}px`;
+        divJoystick.style.top = `${joystick0Top}px`;
+        divJoystick.style.width = `${joystick0Width}px`;
     }
-    // lever
-    const leverHeight = scale * 15;
-    const leverLeft = backgroundLeft + (scale * 17);
-    const leverTop = backgroundTop + (scale * 6);
-    const leverWidth = scale * 4;
-    const divLever = document.getElementById('lever');
+    // joystick1
+    const joystick1Height = scale * 15;
+    const joystick1Left = backgroundLeft + (scale * 27);
+    const joystick1Top = backgroundTop + (scale * 2);
+    const joystick1Width = scale * 15;
+    const divLever = document.getElementById('joystick1');
     if (divLever !== null) {
-        divLever.style.height = `${leverHeight}px`;
-        divLever.style.left = `${leverLeft}px`;
-        divLever.style.top = `${leverTop}px`;
-        divLever.style.width = `${leverWidth}px`;
+        divLever.style.height = `${joystick1Height}px`;
+        divLever.style.left = `${joystick1Left}px`;
+        divLever.style.top = `${joystick1Top}px`;
+        divLever.style.width = `${joystick1Width}px`;
     }
     // output general
-    const outputFontSize = Math.floor(scale * 1.8);
-    const outputPaddingTop = Math.floor(scale * 1.30);
+    const outputFontSize = Math.floor(scale * 1.6);
+    const outputPaddingTop = Math.floor(scale * 0.7);
     // output0
-    const output0Height = scale * 4;
-    const output0Left = backgroundLeft + scale;
-    const output0Top = backgroundTop + scale;
+    const output0Height = scale * 3;
+    const output0Left = backgroundLeft + (scale * 19);
+    const output0Top = (scale * 2);
     const output0Width = scale * 6;
     const divOutput0 = document.getElementById('output0');
     if (divOutput0 !== null) {
@@ -60,9 +60,9 @@ const resizeDivs = () => {
         divOutput0.style.width = `${output0Width}px`;
     }
     // output1
-    const output1Height = scale * 4;
-    const output1Left = backgroundLeft + (scale * 8);
-    const output1Top = backgroundTop + scale;
+    const output1Height = scale * 3;
+    const output1Left = backgroundLeft + (scale * 19);
+    const output1Top = (scale * 6);
     const output1Width = scale * 6;
     const divOutput1 = document.getElementById('output1');
     if (divOutput1 !== null) {
@@ -74,9 +74,9 @@ const resizeDivs = () => {
         divOutput1.style.width = `${output1Width}px`;
     }
     // output2
-    const output2Height = scale * 4;
-    const output2Left = backgroundLeft + (scale * 15);
-    const output2Top = backgroundTop + scale;
+    const output2Height = scale * 3;
+    const output2Left = backgroundLeft + (scale * 19);
+    const output2Top = (scale * 10);
     const output2Width = scale * 6;
     const divOutput2 = document.getElementById('output2');
     if (divOutput2 !== null) {
@@ -87,54 +87,71 @@ const resizeDivs = () => {
         divOutput2.style.top = `${output2Top}px`;
         divOutput2.style.width = `${output2Width}px`;
     }
+    // output3
+    const output3Height = scale * 3;
+    const output3Left = backgroundLeft + (scale * 19);
+    const output3Top = (scale * 14);
+    const output3Width = scale * 6;
+    const divOutput3 = document.getElementById('output3');
+    if (divOutput3 !== null) {
+        divOutput3.style.fontSize = `${outputFontSize}px`;
+        divOutput3.style.height = `${output3Height}px`;
+        divOutput3.style.left = `${output3Left}px`;
+        divOutput3.style.paddingTop = `${outputPaddingTop}px`;
+        divOutput3.style.top = `${output3Top}px`;
+        divOutput3.style.width = `${output3Width}px`;
+    }
 };
-const checkJoystick = (touch) => {
-    const joystick = document.getElementById('joystick');
+const checkJoystick0 = (touch) => {
+    const joystick0 = document.getElementById('joystick0');
     const output0 = document.getElementById('output0');
     const output1 = document.getElementById('output1');
-    if (joystick !== null && output0 !== null && output1 !== null) {
-        const joystickHeight = joystick.offsetHeight;
-        const joystickLeft = joystick.offsetLeft;
-        const joystickTop = joystick.offsetTop;
-        const joystickWidth = joystick.offsetWidth;
+    if (joystick0 !== null && output0 !== null && output1 !== null) {
+        const joystick0Height = joystick0.offsetHeight;
+        const joystick0Left = joystick0.offsetLeft;
+        const joystick0Top = joystick0.offsetTop;
+        const joystick0Width = joystick0.offsetWidth;
         const touchX = touch.clientX;
         const touchY = touch.clientY;
-        if (touchX >= joystickLeft && touchX <= (joystickLeft + joystickWidth)) {
-            if (touchY >= joystickTop && touchY <= (joystickTop + joystickHeight)) {
-                const x = (touchX - joystickLeft) / joystickWidth;
-                const y = (touchY - joystickTop) / joystickHeight;
+        if (touchX >= joystick0Left && touchX <= (joystick0Left + joystick0Width)) {
+            if (touchY >= joystick0Top && touchY <= (joystick0Top + joystick0Height)) {
+                const x = (touchX - joystick0Left) / joystick0Width;
+                const y = (touchY - joystick0Top) / joystick0Height;
                 output0.innerText = x.toFixed(4);
                 output1.innerText = y.toFixed(4);
             }
         }
     }
 };
-const checkLever = (touch) => {
-    const lever = document.getElementById('lever');
+const checkJoystick1 = (touch) => {
+    const joystick1 = document.getElementById('joystick1');
     const output2 = document.getElementById('output2');
-    if (lever !== null && output2) {
-        const leverHeight = lever.offsetHeight;
-        const leverLeft = lever.offsetLeft;
-        const leverTop = lever.offsetTop;
-        const leverWidth = lever.offsetWidth;
+    const output3 = document.getElementById('output3');
+    if (joystick1 !== null && output2 !== null && output2 !== null) {
+        const joystick1Height = joystick1.offsetHeight;
+        const joystick1Left = joystick1.offsetLeft;
+        const joystick1Top = joystick1.offsetTop;
+        const joystick1Width = joystick1.offsetWidth;
         const touchX = touch.clientX;
         const touchY = touch.clientY;
-        if (touchX >= leverLeft && touchX <= (leverLeft + leverWidth)) {
-            if (touchY >= leverTop && touchY <= (leverTop + leverHeight)) {
-                const y = (touchY - leverTop) / leverHeight;
-                output2.innerText = y.toFixed(4);
+        if (touchX >= joystick1Left && touchX <= (joystick1Left + joystick1Width)) {
+            if (touchY >= joystick1Top && touchY <= (joystick1Top + joystick1Height)) {
+                const x = (touchX - joystick1Left) / joystick1Width;
+                const y = (touchY - joystick1Top) / joystick1Height;
+                output2.innerText = x.toFixed(4);
+                output3.innerText = y.toFixed(4);
             }
         }
     }
 };
 const touching = (touchEvent) => {
     const touch0 = touchEvent.touches[0];
-    checkJoystick(touch0);
-    checkLever(touch0);
+    checkJoystick0(touch0);
+    checkJoystick1(touch0);
     if (touchEvent.touches.length > 1) {
         const touch1 = touchEvent.touches[1];
-        checkJoystick(touch1);
-        checkLever(touch1);
+        checkJoystick0(touch1);
+        checkJoystick1(touch1);
     }
 };
 const listeners = () => {

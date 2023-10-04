@@ -9,37 +9,26 @@
       #background {
         position: absolute;
       }
-      #joystick {
-        background-color: #a5abff;
-        position: absolute;
-      }
-      #lever {
-        background-color: #a5abff;
-        position: absolute;
-      }
-      #output0 {
-        position: absolute;
-      }
-      #output1 {
-        position: absolute;
-      }
-      #output2 {
+      .joystick {
+        background-color: #e1e1e1;
         position: absolute;
       }
       .output {
         background-color: #b9b9b9;
         box-sizing: border-box;
+        position: absolute;
         text-align: center;
       }
     </style>
   </head>
   <body>
     <div id = 'background'></div>
-    <div id = 'joystick'></div>
-    <div id = 'lever'></div>
+    <div id = 'joystick0' class = 'joystick'></div>
+    <div id = 'joystick1' class = 'joystick'></div>
     <div id = 'output0' class = 'output'>0.000</div>
     <div id = 'output1' class = 'output'>0.000</div>
     <div id = 'output2' class = 'output'>0.000</div>
+    <div id = 'output3' class = 'output'>0.000</div>
     <script src = 'code.js'></script>
   </body>
 </html>
