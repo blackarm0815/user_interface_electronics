@@ -1,0 +1,54 @@
+# install the 64 bit version
+
+# update
+sudo apt update && sudo apt upgrade
+
+# install tmux to run the session in
+sudo apt install tmux
+
+# install nginx
+sudo apt install nginx
+# copy the new nginx config file into place
+sudo cp nginx_api /etc/nginx/sites-enabled
+sudo systemctl restart nginx.service
+
+# install certbot
+sudo apt install snapd
+sudo snap install --classic certbot
+
+# set up ssl cert for main site
+sudo certbot --nginx
+# follow instructions
+
+# install NodeJS and NPM
+sudo apt-get install -y nodejs npm
+# update to latest version
+sudo npm install -g n && sudo n stable && sudo npm install -g npm
+
+# pull this repo
+git clone https://github.com/blackarm0815/simple_express_api.git
+cd simple_express_api.git
+
+# install node dependencies
+npm install
+
+# put the html file in place
+sudo mkdir /var/www/html/api
+sudo cp index.html /var/www/html/api
+sudo cp favicon.ico /var/www/html
+
+# start a tmux session
+tmux new -s api
+
+# start the node api in tmux
+node api.js
+
+# detach the tmux session
+# ctrl-b then d
+
+# list running tmux sessions
+tmux ls
+
+# reattach the tmux session
+tmux attach -t api
+
