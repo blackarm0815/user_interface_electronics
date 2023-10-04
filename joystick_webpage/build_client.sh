@@ -16,3 +16,4 @@ else
   exit
 fi
 echo
+scp code.js pi:/var/www/html/joystick

@@ -87,8 +87,75 @@ const resizeDivs = () => {
     divOutput2.style.width = `${output2Width}px`;
   }
 };
-const main = () => {
+const checkJoystick = (
+  touch: Touch,
+) => {
+  const joystick = <HTMLDivElement>document.getElementById('joystick');
+  const output0 = <HTMLDivElement>document.getElementById('output0');
+  const output1 = <HTMLDivElement>document.getElementById('output1');
+  if (joystick !== null && output0 !== null && output1 !== null) {
+    const joystickHeight = joystick.offsetHeight;
+    const joystickLeft = joystick.offsetLeft;
+    const joystickTop = joystick.offsetTop;
+    const joystickWidth = joystick.offsetWidth;
+    const touchX = touch.clientX;
+    const touchY = touch.clientY;
+    if (touchX >= joystickLeft && touchX <= (joystickLeft + joystickWidth)) {
+      if (touchY >= joystickTop && touchY <= (joystickTop + joystickHeight)) {
+        const x = (touchX - joystickLeft) / joystickWidth;
+        const y = (touchY - joystickTop) / joystickHeight;
+        output0.innerText = x.toFixed(4);
+        output1.innerText = y.toFixed(4);
+      }
+    }
+  }
+};
+const checkLever = (
+  touch: Touch,
+) => {
+  const lever = <HTMLDivElement>document.getElementById('lever');
+  const output2 = <HTMLDivElement>document.getElementById('output2');
+  if (lever !== null && output2) {
+    const leverHeight = lever.offsetHeight;
+    const leverLeft = lever.offsetLeft;
+    const leverTop = lever.offsetTop;
+    const leverWidth = lever.offsetWidth;
+    const touchX = touch.clientX;
+    const touchY = touch.clientY;
+    if (touchX >= leverLeft && touchX <= (leverLeft + leverWidth)) {
+      if (touchY >= leverTop && touchY <= (leverTop + leverHeight)) {
+        const y = (touchY - leverTop) / leverHeight;
+        output2.innerText = y.toFixed(4);
+      }
+    }
+  }
+};
+const touching = (
+  touchEvent: TouchEvent,
+) => {
+  const touch0 = touchEvent.touches[0];
+  checkJoystick(
+    touch0,
+  );
+  checkLever(
+    touch0,
+  );
+  if (touchEvent.touches.length > 1) {
+    const touch1 = touchEvent.touches[1];
+    checkJoystick(
+      touch1,
+    );
+    checkLever(
+      touch1,
+    );
+  }
+};
+const listeners = () => {
   window.addEventListener('resize', resizeDivs);
+  document.addEventListener('touchmove', touching);
+};
+const main = () => {
+  listeners();
   resizeDivs();
 };
 main();
