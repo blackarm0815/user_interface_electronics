@@ -2,6 +2,11 @@
 
 this creates two joysticks and shows the xy data
 
+### firefox on android
+
+works fine
+
+
 ### chrome on android
 
  this browser might have an issue where the page zooms despite the html settings. to fix this
@@ -12,7 +17,11 @@ this creates two joysticks and shows the xy data
 - turn off 'force enable zoom'
 
 
-
 ### safari on iphone
 
-seems to ignore html settings, not sure what the fix is
+ignores web standards and zooms, unusable
+
+
+### firefox on iphone
+
+works fine
