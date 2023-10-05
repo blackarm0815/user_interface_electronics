@@ -154,9 +154,18 @@ const touching = (touchEvent) => {
         checkJoystick1(touch1);
     }
 };
+// const preventMotion = (
+//   event: Event,
+// ) => {
+//   window.scrollTo(0, 0);
+//   event.preventDefault();
+//   event.stopPropagation();
+// };
 const listeners = () => {
     window.addEventListener('resize', resizeDivs);
     document.addEventListener('touchmove', touching);
+    // document.body.addEventListener('scroll', preventMotion, false);
+    // document.body.addEventListener('touchmove', preventMotion, false);
 };
 const main = () => {
     listeners();

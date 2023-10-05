@@ -16,5 +16,5 @@ else
   exit
 fi
 echo
-scp code.js pi:/var/www/html/joystick
-scp index.html pi:/var/www/html/joystick
+echo "uploading"
+./upload.sh
