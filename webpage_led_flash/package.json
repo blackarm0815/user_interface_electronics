@@ -1,0 +1,15 @@
+{
+  "name": "webpage_led_flash",
+  "version": "1.0.0",
+  "description": "simple button on a webpage make the api flash an led",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "rpio": "^2.4.2"
+  }
+}
