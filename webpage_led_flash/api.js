@@ -1,7 +1,7 @@
 // this is a security thing is needed for the webserver and api to work on the same machine
 const cors = require('cors');
 // node-rpio
-const rpio = require('../lib/rpio');
+const rpio = require('node_modules/rpio');
 
 // express.js handles all the api stuff
 const express = require('express');
