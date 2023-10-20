@@ -35,6 +35,7 @@ app.get('/blink', (req, res) => {
    * Blink the LED 5 times.  The sleep functions block, but for a trivial example
    * like this that isn't a problem and simplifies things.
    */
+  console.log('blink');
   for (var i = 0; i < 5; i++) {
   
           /* On for 1 second */
