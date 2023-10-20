@@ -36,15 +36,15 @@ app.get('/blink', (req, res) => {
    * like this that isn't a problem and simplifies things.
    */
   console.log('blink');
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 10; i++) {
   
           /* On for 1 second */
           rpio.write(pin, rpio.HIGH);
-          rpio.sleep(1);
+          rpio.sleep(100);
   
           /* Off for half a second (500ms) */
           rpio.write(pin, rpio.LOW);
-          rpio.msleep(500);
+          rpio.msleep(100);
   }
 });
 
