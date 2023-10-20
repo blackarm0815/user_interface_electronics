@@ -4,7 +4,7 @@ const cors = require('cors');
 const rpio = require('./node_modules/rpio');
 
 // express.js handles all the api stuff
-const express = require('express');
+const express = require('./node_modules/express');
 const app = express();
 
 /*
